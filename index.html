@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập Mảng Buổi 8</title>
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container my-5 py-5 ">
+
+        <div class="row">
+            <div class="col-10 mx-auto d-flex">
+                <!-- Menu bố cục -->
+                <div class="px-3 py-3 bt1_menu col-2">
+                    <ul class="nav nav-pills mb-3 d-block" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active text-center" id="pills-Bt1-tab" data-toggle="pill"
+                                href="#pills-Bt1" role="tab" aria-controls="pills-home" aria-selected="true">Bài tập
+                                1</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt2-tab" data-toggle="pill"
+                                href="#pills-Bt2" role="tab" aria-controls="pills-profile" aria-selected="false">Bài
+                                tập 2</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt3-tab" data-toggle="pill"
+                                href="#pills-Bt3" role="tab" aria-selected="false">Bài
+                                tập 3</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt4-tab" data-toggle="pill"
+                                href="#pills-Bt4" role="tab" aria-selected="false">Bài
+                                tập 4</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt5-tab" data-toggle="pill"
+                                href="#pills-Bt5" role="tab" aria-selected="false">Bài
+                                tập 5</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt6-tab" data-toggle="pill"
+                                href="#pills-Bt6" role="tab" aria-selected="false">Bài
+                                tập 6</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt7-tab" data-toggle="pill"
+                                href="#pills-Bt7" role="tab" aria-selected="false">Bài
+                                tập 7</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt8-tab" data-toggle="pill"
+                                href="#pills-Bt8" role="tab" aria-selected="false">Bài
+                                tập 8</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt9-tab" data-toggle="pill"
+                                href="#pills-Bt9" role="tab" aria-selected="false">Bài
+                                tập 9</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-center" id="pills-Bt10-tab" data-toggle="pill"
+                                href="#pills-Bt10" role="tab" aria-selected="false">Bài
+                                tập 10</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu bố cục end -->
+
+                <div class="tab-content px-5 bt1_content col-10" id="pills-tabContent">
+                    <!-- Bài tập 1 -->
+                    <div class="tab-pane fade show py-3 active" id="pills-Bt1" aria-labelledby="pills-Bt1-tab" role="tabpanel">
+                        <h4><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Tổng số dương</h4>
+
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum1">
+                                </form>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mt-3" id="btn1Add" onclick="addNumber1()" type="button">Thêm số</button>
+                        <button class="btn btn-success mt-3" id="btn1Sum" onclick="calSum()" type="button">Tính tổng</button>
+
+                        <div class="txtBt mt-5 py-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResult1" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 1 End -->
+
+                    <!-- Bài tập 2 -->
+                    <div class="tab-pane fade" id="pills-Bt2" role="tabpanel" aria-labelledby="pills-Bt2-tab">
+                        <h4><span  class="fas fa-list-ol mr-3 mt-3 bt2_Icon"></span>Đếm số dương</h4>
+
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum2">
+                                </form>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mt-3" id="btn2Add" onclick="addNumber2()" type="button">Thêm số</button>
+                        <button class="btn btn-success mt-3" id="btn2Cal" onclick="count2()" type="button">Đếm số</button>
+
+                        <div class="txtBt mt-5 py-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResulBt2" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 2 ENd -->
+
+                    <!-- Bài tập3 -->
+                    <div class="tab-pane fade" id="pills-Bt3" role="tabpanel" aria-labelledby="pills-Bt3-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Tìm số nhỏ nhất
+                        </h4>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum3">
+                                </form>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mt-3" id="btn3Add" onclick="addNumber3()" type="button">Thêm số</button>
+                        <button class="btn btn-success mt-3" id="btn3Cal" onclick="min3()" type="button">Tìm số nhỏ nhất</button>
+                        <div class="txtBt mt-5 py-3 mb-3">
+                            <span class="far fa-hand-point-right d-flex">
+                                <p id="txtResult_Bt3" class=""></p>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Bài tập 3 End -->
+
+                    <!-- Bài tập 4 -->
+                    <div class="tab-pane fade" id="pills-Bt4" role="tabpanel" aria-labelledby="pills-Bt4-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Tìm số dương nhỏ nhất
+                        </h4>
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <form action="">
+                                    <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum4">
+                                </form>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success mt-3" id="btn4Add" onclick="addNumber4()" type="button">Thêm số</button>
+                        <button class="btn btn-success mt-3" id="btn4Cal" onclick="minPlus()" type="button">Tìm số dương nhỏ nhất</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt4" class=""></p>
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 4 END -->
+
+                    <!-- Bài tập 5 -->
+                    <div class="tab-pane fade" id="pills-Bt5" role="tabpanel" aria-labelledby="pills-Bt5-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Tìm số chẵn cuối cùng
+                        </h4>
+                    <div class="row mt-4">
+                        <div class="col-4" id="Connect">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số" id="inputNum5">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn5Add" onclick="addNumber5()" type="button">Thêm số</button>
+                    <button class="btn btn-success mt-3" id="btn5Cal" onclick="timChanCuoi()" type="button">Tìm số chẵn cuối</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt5" class=""></p>
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 5 END -->
+
+                    <!-- Bài tập 6 -->
+                    <div class="tab-pane fade" id="pills-Bt6" role="tabpanel" aria-labelledby="pills-Bt6-tab">
+                    <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Đổi chỗ
+                    </h4>
+                    <div class="row mt-4">
+                        <div class="col-4" id="Connect">
+                             <form action="">
+                                 <input type="number" class="form-control" placeholder="Nhập số cho mảng" id="inputNum6">
+                                </form>
+                         </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn6Add" onclick="addNumber6()" type="button">Thêm số</button>
+
+                    <div class="row mt-4">
+                        <div class="col-4" id="Connect">
+                             <form action="">
+                                 <input type="number" class="form-control" placeholder="Nhập số vị trí 1" id="inputViTri1">
+                                </form>
+                         </div>
+                         <div class="col-4" id="Connect">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số vị trí 2" id="inputViTri2">
+                               </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn6Cal" onclick="doiCho()" type="button">Đổi chỗ</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-block">
+                            <p id="txtResult_Bt6" class=""></p>
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 6 END -->
+
+                    <!-- Bài tập 7 -->
+                    <div class="tab-pane fade" id="pills-Bt7" role="tabpanel" aria-labelledby="pills-Bt7-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Sắp xếp tăng dần
+                        </h4>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum7">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn7Add" onclick="addNumber7()" type="button">Thêm số</button>
+                    <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt7" onclick="sapXep()">Sắp xếp</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt7" class=""></p>
+                            
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 7 END -->
+
+                    <!-- Bài tập 8 -->
+                    <div class="tab-pane fade" id="pills-Bt8" role="tabpanel" aria-labelledby="pills-Bt8-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Tìm số nguyên tố đầu tiên
+                        </h4>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum8">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn8Add" onclick="addNumber8()" type="button">Thêm số</button>
+                    <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt8" onclick="soNguyenToDauTien()">Xem kết quả</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt8" class=""></p>
+                            
+                        </span> 
+                    </div>
+                    </div>
+                    <!-- Bài tập 8 END -->
+
+                    <!-- Bài tập 9 -->
+                    <div class="tab-pane fade" id="pills-Bt9" role="tabpanel" aria-labelledby="pills-Bt9-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>Đếm số nguyên
+                        </h4>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum9">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn9Add" onclick="addNumber9()" type="button">Thêm số</button>
+                    <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt9" onclick="demSoNguyen()">Xem kết quả</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt9" class=""></p>
+                            
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 9 END -->
+
+                    <!-- Bài tập 10 -->
+                    <div class="tab-pane fade" id="pills-Bt10" role="tabpanel" aria-labelledby="pills-Bt10-tab">
+                        <h4 class="mt-3"><span  class="fas fa-list-ol mr-3 bt2_Icon"></span>So sánh số lượng số âm và số dương
+                        </h4>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <form action="">
+                                <input type="number" class="form-control" placeholder="Nhập số n" id="inputNum10">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn btn-success mt-3" id="btn10Add" onclick="addNumber10()" type="button">Thêm số</button>
+                    <button class="btn btn-success mt-3"  type="button" id="CalBtn_Bt10" onclick="soSanhAmDuong()">Xem kết quả</button>
+                    <div class="txtBt mt-5 py-3 mb-3">
+                        <span class="far fa-hand-point-right d-flex">
+                            <p id="txtResult_Bt10" class=""></p>
+                            
+                        </span>
+                    </div>
+                    </div>
+                    <!-- Bài tập 10 END -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="./js/bt1.js"></script>
+    <script src="./js/bt2.js"></script>
+    <script src="./js/bt3.js"></script>
+    <script src="./js/bt4.js"></script>
+    <script src="./js/bt5.js"></script>
+    <script src="./js/bt6.js"></script>
+    <script src="./js/bt7.js"></script>
+    <script src="./js/bt8.js"></script>
+    <script src="./js/bt9.js"></script>
+    <script src="./js/bt10.js"></script>
+    
+</body>
+
+</html>
