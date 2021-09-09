@@ -21,7 +21,7 @@ function addNumber5(){
 }
 // Function tìm chẵn cuối
 function timChanCuoi(){
-    var chanCuoi = -1;
+    var chanCuoi = 0;
     for (var i = 0; i < numArray5.length; i++){
         if(numArray5[i] % 2===0){
             chanCuoi= numArray5[i]
